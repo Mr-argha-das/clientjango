@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #FF6B6B, #E73838, #FF6B6B);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 400px;
+    }
+
+    h1 {
+      color: #E73838;
+      font-size: 24px;
+    }
+
+    .upload-field {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .upload-field label {
+      color: #E73838;
+      font-weight: bold;
+    }
+
+    .upload-btn-wrapper {
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+    }
+
+    .btn {
+      border: none;
+      color: #fff;
+      background-color: #E73838;
+      padding: 10px 20px;
+      border-radius: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    .btn:hover {
+      background-color: #FF6B6B;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Upload and Analyze</h1>
+
+    <!-- Audio Upload Field -->
+    <div class="upload-field">
+      <label for="audio">Upload Audio:</label>
+      <div class="upload-btn-wrapper">
+        <button class="btn">Choose Audio File</button>
+        <input type="file" id="audio" accept="audio/*" />
+      </div>
+    </div>
+
+    <!-- File Upload Field -->
+    <div class="upload-field">
+      <label for="file">Upload File:</label>
+      <div class="upload-btn-wrapper">
+        <button class="btn">Choose File</button>
+        <input type="file" id="file" />
+      </div>
+    </div>
+
+    <!-- Analyze Button -->
+    <button class="btn" id="analyze-button">Analyze</button>
+  </div>
+</body>
+</html>
