@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from .indexview import home
+from .indexview import pie_chart
 from django.urls import re_path
 urlpatterns = [
     re_path(r'^$', home),
+    re_path(r'result', pie_chart),
 ]
