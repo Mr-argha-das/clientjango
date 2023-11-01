@@ -1,0 +1,136 @@
+.header-menu{
+    display:flex;
+    justify-content: space-around;
+    background: rgb(183,51,169);
+background: linear-gradient(90deg, rgba(183,51,169,0.9808298319327731) 0%, rgba(18,11,231,1) 100%);
+padding-left:50px;
+padding-right:50px;
+padding-top:4px;
+padding-bottom:4px;
+color:white;
+}
+
+.search-input::placeholder{
+    font-size:14px;
+    font-weight:500;
+    padding-left:22px;
+}
+
+.search-input{
+    position: relative;
+    border-radius: 20px !important;
+    width:600px !important;
+}
+.search-icon{
+    position:absolute;
+    top:15px;
+    color:black;
+    margin-left:10px;
+    cursor:pointer;
+}
+
+/* .content-bg{
+    background-color:rgb(204, 204, 252);
+ 
+    height:100vh;
+} */
+
+.content-box{
+    background-color:white;
+    border:solid 1px grey;
+    padding:30px;
+    margin-top:10px;
+}
+
+.house-icon{
+    border:solid 1px grey;
+    /* padding:5px; */
+    width:60px;
+    height:60px;
+    border-radius:100%;
+   padding-left:8px;
+  
+}
+
+.upload-input{
+    border-radius:10px !important;
+    font-size:16px !important;
+    font-weight:500 !important;
+    border:solid 1px grey !important;
+    position: relative;
+    width:80% !important;
+    margin:auto;
+}
+.upload-input::placeholder{
+   text-align: center;
+}
+.close-icon{
+    font-size:23px !important;
+    position: absolute;
+    left:13%;
+    margin-top:-35px;
+    cursor:pointer;
+}
+
+.upload-icon{
+    font-size:23px !important;
+    position: absolute;
+    right:13%;
+    margin-top:-35px;
+    cursor:pointer;
+}
+
+.left-icon{
+    font-size:30px !important;
+    cursor:pointer;  
+    width:40px;
+    height:40px;
+    margin-top:-4px;
+}
+.choose-file{
+    border:solid 1px grey !important;
+}
+.choose-file::placeholder{
+font-size:16px;
+font-weight:500;
+text-align: center;
+}
+
+.button-vw{
+    background-color:rgb(60, 14, 107);
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:7px;
+    padding-bottom: 7px;
+    border-radius: 10px;
+    border:solid 1px blueviolet;
+
+    color:white;
+    font-size:16px;
+    font-weight:500;
+    width:50%;
+    margin:auto
+}
+
+.des-box-1{
+    border:solid 1px grey;
+    font-size:14px;
+    font-weight:500;
+    padding:15px;
+    text-align: justify;
+    background-color:rgb(235, 235, 245);
+    position: relative;
+}
+
+.img-vw{
+    width:100%;
+    height:100%;
+}
+
+.image-box{
+    width:120px;
+    height:120px;
+    position: absolute;
+    left:30%;
+    margin-top:-50px;
+}

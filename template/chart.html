@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +12,62 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
         }
+
         h1 {
             margin: 20px;
         }
+
         .chart-container {
             text-align: center;
             margin: 20px;
         }
+
         img {
             max-width: 100%;
             height: auto;
         }
+
+        /* styles.css */
+        .my-button {
+            background-color: #3498db;
+            /* Button background color */
+            color: #fff;
+            /* Text color */
+            border: none;
+            /* Remove button border */
+            padding: 10px 20px;
+            /* Add padding to the button */
+            border-radius: 5px;
+            /* Rounded corners */
+            cursor: pointer;
+            /* Change cursor on hover */
+            font-size: 16px;
+            /* Font size */
+        }
+
+        .my-button:hover {
+            background-color: #2980b9;
+            /* Button background color on hover */
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Pie Chart</h1>
+        <h1>Your Result</h1>
     </header>
     <div class="chart-container">
         <img src="{{ image_url }}" alt="Pie Chart">
-        <img src="{{ image_url }}" alt="Pie Chart">
+        <img src="{{image_grahp}}" alt="Pie Chart">
     </div>
+    <a href="/page2"> <button class="my-button">Analysis !</button></a>
 </body>
+
 </html>

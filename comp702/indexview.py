@@ -3,7 +3,9 @@ from django.template import loader
 from django.shortcuts import render
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 from io import BytesIO
+from PIL import Image
 import base64
 import Foundation
 import matplotlib
@@ -15,8 +17,7 @@ import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from transformers import get_linear_schedule_with_warmup
-matplotlib.use('Agg')  # Set the backend to non-interactive
-
+matplotlib.use('Agg') 
 import pandas as pd
 import matplotlib.pyplot as plt
 from io import BytesIO
@@ -28,7 +29,17 @@ def home(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
 
+def page1(request):
+    template = loader.get_template('assign-page1.html')
+    return HttpResponse(template.render())
 
+def page2(request):
+    template = loader.get_template('assign-page2.html')
+    return HttpResponse(template.render())
+
+def page3(request):
+    template = loader.get_template('assign-page3.html')
+    return HttpResponse(template.render())
 
 def pie_chart(request):
     true_data = pd.read_csv('comp702/True.csv')
@@ -64,34 +75,20 @@ def pie_chart(request):
     
     # Define the maximum title length
     MAX_LENGTH = 15
-    
-    # Tokenize and encode sequences in the training set
-    tokens_train = tokenizer.batch_encode_plus(
-        train_text.tolist(),
-        max_length=MAX_LENGTH,
-        pad_to_max_length=True,
-        truncation=True
-    )
-    
-    # Tokenize and encode sequences in the validation set
-    tokens_val = tokenizer.batch_encode_plus(
-        val_text.tolist(),
-        max_length=MAX_LENGTH,
-        pad_to_max_length=True,
-        truncation=True
-    )
-    tokens_test = tokenizer.batch_encode_plus(
-    test_text.tolist(),
-    max_length=MAX_LENGTH,
-    pad_to_max_length=True,
-    truncation=True
-    )
-        # response = HttpResponse(content_type='image/png')
-        # response['Content-Disposition'] = 'attachment; filename="pie_chart.png"'
-        # response.write(base64.b64decode(img_data))
-    context = {'image_url': f"data:image/png;base64,{img_data}"}
+    image_buf = BytesIO()
+    plt.savefig(image_buf, format='png')
+    image_buf.seek(0)
+    image = Image.open(image_buf)
+    image.save('image_grahp.png')
+    with open('image_grahp.png', 'rb') as image_file:
+        image_binary = image_file.read()
+    image_base64 = base64.b64encode(image_binary).decode('utf-8')
+    context = {
+        'image_url': f"data:image/png;base64,{img_data}", 
+        'image_grahp': f"data:image/png;base64,{image_base64}"
+        }
     return render(request, 'chart.html', context)
-  
+
 if __name__ == "__main__":
     Foundation.NSApplication.sharedApplication()
     Foundation.NSApplication.sharedApplication().run()

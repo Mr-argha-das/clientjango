@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page 3</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assignpage.css' %}" />
+    <link
+      href="{% static 'bootstrap.min.css' %}"
+      rel="stylesheet"
+      integrity= "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="header-menu">
+      <div>
+        <i class="bi bi-arrow-left fs-2"></i>
+        <i class="bi bi-arrow-right fs-2 ms-2"></i>
+      </div>
+      <div class="mt-1">
+        <form action="">
+          <input
+            type="text"
+            placeholder="Truth Trace : Navigating MisInformation"
+            class="form-control search-input"
+          />
+          <i class="bi bi-search search-icon"></i>
+        </form>
+      </div>
+
+      <div class="mt-1">
+        <i class="bi bi-arrow-clockwise fs-4"></i>
+        <i class="bi bi-list fs-4 ms-2"></i>
+        <i class="bi bi-star fs-4 ms-2"></i>
+      </div>
+    </div>
+
+    <div class="content-bg">
+      <div class="container-fluid">
+        <div class="content-box shadow-sm">
+          <h2 class="text-center">
+            <b>
+              Analysis of <i class="bi bi-chevron-left"></i>article title
+              <i class="bi bi-chevron-right"></i
+            ></b>
+          </h2>
+
+          <div class="row">
+            <div class="col-md-5 mt-4 mb-5">
+              <div class="des-box-1">
+                <p>
+                 "Donald Trump Sends Out Controversial New Year’s Eve Message; This is Alarming",  
+                    "WATCH: George W. Bush Addresses Trump For His Views on Current Issues",  
+                    "U.S. Legislators Interview Businessperson at 2016 Trump Tower Meeting: Sources",  
+                    "Trump Administration Issues New Rules on U.S. Visa Waivers"  
+                </p>
+               
+              </div>
+              <div class="image-box"><img src="PieChart.png" alt="image" class="img-fluid img-vw"></div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 mt-4">
+                <h6>Common Articles of Discussion :</h6>
+
+                <div class="des-box-1">
+                    <p>
+                      "Donald Trump Sends Out Controversial New Year’s Eve Message; This is Alarming",  # Fake
+                    "WATCH: George W. Bush Addresses Trump For His Views on Current Issues",  # Fake
+                    </p>
+                  </div>
+                  <h6 class="mt-3"> Frequently Referenced Sources :</h6>
+
+                  <div class="des-box-1 mt-3">
+                    <p>
+                      "U.S. Legislators Interview Businessperson at 2016 Trump Tower Meeting: Sources",  # True
+                      "Trump Administration Issues New Rules on U.S. Visa Waivers"  # True
+                    </p>
+                  </div>
+            </div>
+
+            <div class="col-md-12 mt-4">
+             <h5><b>More Analysis</b></h5>
+
+             <h6 class="text-center mt-4">Related Content Of Interest</h6>
+
+            </div>
+            <div class="col-md-4">
+                <div class="des-box-1">
+                    <p>
+                      Donald Trump Sends Out Controversial New Years Eve Message; This is Alarming
+                    </p>
+                  </div>
+
+                  <div class="des-box-1 mt-3">
+                    <p>
+                      "WATCH: George W. Bush Addresses Trump For His Views on Current Issues",                     </p>
+                  </div>
+            </div>
+
+            <div class="col-md-4 mt-5">
+                <div class="des-box-1 mt-5">
+                    <h5 class="text-center">
+                     Related Topics
+                    </h5>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                <div class="des-box-1">
+                    <p>
+                      U.S. Legislators Interview Businessperson at 2016 Trump Tower Meeting: Sources
+                    </p>
+                  </div>
+
+                  <div class="des-box-1 mt-3">
+                    <p>
+                      Trump Administration Issues New Rules on U.S. Visa Waivers
+                    </p>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="{$ static 'bootstrap.bundle.min.js' %}"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
